@@ -27,6 +27,10 @@ if executable('gopls')
   let g:LanguageClient_serverCommands['go'] = ['gopls']
 endif
 
+if executable('bash-language-server')
+  let g:LanguageClient_serverCommands['sh'] = ['bash-language-server', 'start']
+endif
+
 
 " Common Configurations
 augroup LanguageClient_config
