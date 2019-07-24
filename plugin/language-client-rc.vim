@@ -17,6 +17,10 @@ endif
 
 if executable('clangd')
   let g:LanguageClient_serverCommands['cpp'] = ['clangd']
+  let g:LanguageClient_serverCommands['c'] = ['clangd']
+elseif executable('/usr/local/opt/llvm/bin/clangd')
+  let g:LanguageClient_serverCommands['cpp'] = ['/usr/local/opt/llvm/bin/clangd']
+  let g:LanguageClient_serverCommands['c'] = ['/usr/local/opt/llvm/bin/clangd']
 endif
 
 if executable('docker-langserver')
