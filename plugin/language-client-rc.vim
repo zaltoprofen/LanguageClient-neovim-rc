@@ -47,6 +47,7 @@ function LC_maps()
   if has_key(g:LanguageClient_serverCommands, &filetype)
     " any keybindings you want, such as ...
     nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
+    nnoremap <silent> <S-C-a> :call LanguageClient_textDocument_codeAction()<CR>
     nnoremap <silent> <Leader>lh :call LanguageClient_textDocument_hover()<CR>
     nnoremap <silent> <Leader>ld :call LanguageClient_textDocument_definition()<CR>
     nnoremap <silent> <Leader>lr :call LanguageClient_textDocument_rename()<CR>
